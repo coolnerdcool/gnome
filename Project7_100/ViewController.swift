@@ -15,15 +15,15 @@ class ViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		let urlString: String
+		let urlString: String = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
 		
-		if navigationController?.tabBarItem.tag == 0 {
-			urlString = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
-			
-		} else {
-			urlString =  "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
-			
-		}
+//		if navigationController?.tabBarItem.tag == 0 {
+//			urlString = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+//			
+//		} else {
+//			urlString =  "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+//			
+//		}
 		
 		if let url = URL(string: urlString) {
 			if let data = try? Data(contentsOf: url) {
@@ -47,7 +47,7 @@ class ViewController: UITableViewController {
 		let decoder = JSONDecoder()
 		
 		if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
-			petitions = jsonPetitions.results
+			petitions = jsonPetitions.Brastlewark
 			tableView.reloadData()
 			
 		}
@@ -65,7 +65,8 @@ class ViewController: UITableViewController {
 		let petition = petitions[indexPath.row]
 		
 		cell.textLabel?.text = petition.name
-		cell.detailTextLabel?.text = petition.hairColor
+		cell.detailTextLabel?.text = petition.hair_Color
+		print (petition.name)
 		
 		return cell
 		

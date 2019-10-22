@@ -23,7 +23,7 @@ struct Petition: Codable {
 	
 	var weight: Int
 	var height: Int
-	var hairColor: String
+	var hair_Color: String
 	
 	var professions = [String]()
 	var friends = [String]()
