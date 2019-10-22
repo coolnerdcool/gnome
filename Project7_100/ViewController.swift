@@ -11,19 +11,35 @@ import UIKit
 class ViewController: UITableViewController {
 	
 	var petitions = [Petition]()
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+		let urlString: String
+		
+		if navigationController?.tabBarItem.tag == 0 {
+			urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+			
+		} else {
+			urlString =  "https://www.api.whitehouse.gov/petitions.json?signatureCountFloor=10000&limit=100"
+			
+		}
 		
 		if let url = URL(string: urlString) {
 			if let data = try? Data(contentsOf: url) {
-			
 				parse(json: data)
-				
+				return
 			}
+			
 		}
+		showError()
+	}
+	
+	func showError() {
+		let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed. Please show you connection and try again.", preferredStyle: .alert)
+		
+		ac.addAction(UIAlertAction(title: "OK", style: .default))
+		present(ac, 	animated: true)
 	}
 	
 	func parse(json: Data) {
