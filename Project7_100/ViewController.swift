@@ -18,10 +18,10 @@ class ViewController: UITableViewController {
 		let urlString: String
 		
 		if navigationController?.tabBarItem.tag == 0 {
-			urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+			urlString = "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
 			
 		} else {
-			urlString =  "https://www.api.whitehouse.gov/petitions.json?signatureCountFloor=10000&limit=100"
+			urlString =  "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
 			
 		}
 		
@@ -29,9 +29,10 @@ class ViewController: UITableViewController {
 			if let data = try? Data(contentsOf: url) {
 				parse(json: data)
 				return
+				
 			}
-			
 		}
+		
 		showError()
 	}
 	
@@ -43,7 +44,6 @@ class ViewController: UITableViewController {
 	}
 	
 	func parse(json: Data) {
-		
 		let decoder = JSONDecoder()
 		
 		if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
@@ -64,8 +64,8 @@ class ViewController: UITableViewController {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 		let petition = petitions[indexPath.row]
 		
-		cell.textLabel?.text = petition.title
-		cell.detailTextLabel?.text = petition.body
+		cell.textLabel?.text = petition.name
+		cell.detailTextLabel?.text = petition.hairColor
 		
 		return cell
 		

@@ -8,9 +8,24 @@
 
 import Foundation
 
+//struct Petition: Codable {
+//	var title: String
+//	var body: String
+//	var signatureCount: Int
+//	
+//}
+
 struct Petition: Codable {
-	var title: String
-	var body: String
-	var signatureCount: Int
+	var id: Int
+	var name: String
+	var thumbnail: String
+	var age: Int
+	
+	var weight: Int
+	var height: Int
+	var hairColor: String
+	
+	var professions = [String]()
+	var friends = [String]()
 	
 }
