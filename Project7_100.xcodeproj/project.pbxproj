@@ -15,6 +15,8 @@
 		509DE05F235E351F005C9415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509DE05E235E351F005C9415 /* Assets.xcassets */; };
 		509DE062235E351F005C9415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509DE060235E351F005C9415 /* LaunchScreen.storyboard */; };
 		509DE06D235E3520005C9415 /* Project7_100Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509DE06C235E3520005C9415 /* Project7_100Tests.swift */; };
+		509DE078235E475C005C9415 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509DE077235E475C005C9415 /* Petition.swift */; };
+		509DE07A235E478C005C9415 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509DE079235E478C005C9415 /* Petitions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		509DE068235E3520005C9415 /* Project7_100Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project7_100Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		509DE06C235E3520005C9415 /* Project7_100Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project7_100Tests.swift; sourceTree = "<group>"; };
 		509DE06E235E3520005C9415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		509DE077235E475C005C9415 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
+		509DE079235E478C005C9415 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				509DE052235E351B005C9415 /* AppDelegate.swift */,
 				509DE054235E351B005C9415 /* SceneDelegate.swift */,
 				509DE056235E351B005C9415 /* ViewController.swift */,
+				509DE077235E475C005C9415 /* Petition.swift */,
+				509DE079235E478C005C9415 /* Petitions.swift */,
 				509DE058235E351B005C9415 /* Main.storyboard */,
 				509DE05E235E351F005C9415 /* Assets.xcassets */,
 				509DE060235E351F005C9415 /* LaunchScreen.storyboard */,
@@ -203,6 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509DE078235E475C005C9415 /* Petition.swift in Sources */,
+				509DE07A235E478C005C9415 /* Petitions.swift in Sources */,
 				509DE057235E351B005C9415 /* ViewController.swift in Sources */,
 				509DE053235E351B005C9415 /* AppDelegate.swift in Sources */,
 				509DE055235E351B005C9415 /* SceneDelegate.swift in Sources */,
